@@ -1,66 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fale Conosco - Vinheria Agnello</title>
+
+    <meta name="description" content="Entre em contato com a Vinheria Agnello. Tire dúvidas, envie sugestões ou fale conosco.">
+    <meta name="keywords" content="vinheria agnello, contato, vinhos, e-commerce, são paulo">
+
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-    <h1>Vinharia Agnello</h1>
+    <h1>Vinheria Agnello</h1>
+
+    <nav>
+        <a href="../../index.html">Home</a>
+        <a href="historia.html">História</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="harmonizacao.html">Harmonização</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
     <h2>Fale conosco</h2>
-    <p>Entre em contato conosco através do formulário abaixo:<p>    
-    <h2></h2>
+    <p>Entre em contato conosco através do formulário abaixo:</p>
 
-<form action="">
-    <h3>Cadastro Pessoal</h3>
+    <form>
+        <h3>Cadastro Pessoal</h3>
 
-    <p>Digite seu nome:</p>
-    <label for="nome_sobrenome"></label>
-    <input type="text" name="nome_sobrenome" placeholder="Nome Sobrenome" style="width: 300px; height: 20px">
+        <p>Digite seu nome:</p>
+        <input type="text" name="nome_sobrenome" placeholder="Nome Sobrenome" required>
 
-    <p>Digite seu E-mail:</p>
-    <label for="email"></label>
-    <input type="text" name="email" placeholder="email" style="width: 300px; height: 20px">
-        
-    <p>Assunto</p>
-    <select name="Assunto" style="width: 300px; height: 20px">
-        <option value="d">Dúvida</option>
-        <option value="r">Reclamação</option>
-        <option value="e">Elogio</option>
-        <option value="s">Sugestão</option>
-        <option value="o">Outro</option>
+        <p>Digite seu E-mail:</p>
+        <input type="email" name="email" placeholder="email" required>
 
-        
-    </select>
-    <p>Mensagem:</p>
-    <textarea name="mensagem" style="width: 300px; height: 100px"></textarea>
-    
-    <br><br>
+        <p>Assunto</p>
+        <select name="assunto" required>
+            <option value="" disabled selected>Selecione um assunto</option>
+            <option value="d">Dúvida</option>
+            <option value="r">Reclamação</option>
+            <option value="e">Elogio</option>
+            <option value="s">Sugestão</option>
+            <option value="o">Outro</option>
+        </select>
 
-    <button type="submit">Enviar</button>
-    <button type="reset">Limpar</button>
-</form>
+        <p>Mensagem:</p>
+        <textarea name="mensagem" required></textarea>
 
-<br><br><br>
-<table>
-    <tr>
-        <td><a href="https://www.google.com/maps/dir//Rua+Jupiter,+375+-+Jardim+Novo+Embu,+Embu+das+Artes+-+SP,+06840-100/@-23.6513694,-46.8642383,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x94cfab7662f0b161:0x6c39eedc6d09250f!2m2!1d-46.8616895!2d-23.6509319!3e2?entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-        <img src="https://logo-teka.com/wp-content/uploads/2025/07/google-maps-sign-logo.svg" alt="logo da vinharia agnello" width="15px">
-    </a></td>
-        <td>       
-    <p>Localização:<p>
-    <p>📍Rua Jupiter, 375-287 - Jardim Novo Embu</p>
-        <td>
-    </tr>
-    
-    <tr>
-    <td>🕒</td>
-        <td>
-        <h3>Atendimento</h3>
-        De segunda a sexta-feira, das 08h às 17h
-    </td>
-    </tr>
+        <br><br>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+    </form>
+
+    <br><br><br>
+
     <table>
+        <tr>
+            <td>
+                <a href="https://www.google.com/maps/dir//Rua+Jupiter,+375+-+Jardim+Novo+Embu,+Embu+das+Artes+-+SP,+06840-100/" target="_blank">
+                    <img src="https://icon-icons.com/download-file?file=https%3A%2F%2Fimages.icon-icons.com%2F2631%2FPNG%2F512%2Fgoogle_maps_new_logo_icon_159147.png&id=159147&pack_or_individual=pack" alt="icone do google maps" width="20px">
+                </a>
+            </td>
+            <td>
+                <p><strong>Localização:</strong></p>
+                <p>📍Rua Jupiter, 375 - Jardim Novo Embu</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>🕒</td>
+            <td>
+                <h3>Atendimento</h3>
+                <p>De segunda a sexta-feira, das 08h às 17h</p>
+            </td>
+        </tr>
+    </table>
+
 </body>
 </html>
