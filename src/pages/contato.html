@@ -9,6 +9,7 @@
     <meta name="keywords" content="vinheria agnello, contato, vinhos, e-commerce, são paulo">
 
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/efeitos.css">
 </head>
 
 <body>
@@ -33,7 +34,27 @@
 
         <p>Digite seu E-mail:</p>
         <input type="email" name="email" placeholder="email" required>
-
+        <!-- ===== PREFERÊNCIA DE VINHO — pseudo-classe :checked ===== -->
+        <p><strong>Preferência de vinho:</strong></p>
+        <div class="filtros-categoria" style="margin-bottom: 14px;">
+            <label>
+                <input type="radio" name="preferencia" value="tinto" checked>
+                <span>🍷 Tinto</span>
+            </label>
+            <label>
+                <input type="radio" name="preferencia" value="branco">
+                <span>🥂 Branco</span>
+            </label>
+            <label>
+                <input type="radio" name="preferencia" value="rose">
+                <span>🌸 Rosé</span>
+            </label>
+            <label>
+                <input type="radio" name="preferencia" value="espumante">
+                <span>✨ Espumante</span>
+            </label>
+        </div>
+<!-- ===== FIM DA PREFERÊNCIA ===== -->
         <p>Assunto</p>
         <select name="assunto" required>
             <option value="" disabled selected>Selecione um assunto</option>

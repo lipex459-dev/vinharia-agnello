@@ -1,0 +1,86 @@
+/* ============================================
+   VINHERIA AGNELLO — efeitos.css
+   Pseudo-classes de interação / efeito:
+     :hover      → links, botões, cards, linhas
+     :focus      → inputs e textarea
+     :active     → botões ao clicar
+     :visited    → links já visitados
+     :focus-within → filtros
+   ============================================ */
+
+/* ── Links de navegação ── */
+nav a:hover {
+    color: #8b0000;
+    text-decoration: underline;
+}
+
+/* ✅ :visited — links já visitados ficam mais escuros */
+nav a:visited {
+    color: #6b0000;
+}
+
+/* ── Cards de produto ── */
+.item-produto:hover,
+article:hover {
+    box-shadow: 0 4px 16px rgba(74, 4, 4, 0.18);
+    transform: translateY(-3px);
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+/* ── Linhas da tabela ── */
+tbody tr:hover {
+    background-color: #f0d8cc !important;
+    cursor: default;
+}
+
+/* ── Itens de lista ── */
+ul li:hover {
+    background-color: #e8d5cc;
+}
+
+/* ✅ :not() — o primeiro li (bg vermelho) tem hover próprio */
+ul li:first-child:hover {
+    background-color: #6b0000;
+}
+
+/* ── Botões ── */
+button:hover {
+    background-color: #6b0000;
+}
+
+/* ✅ :active — efeito de "pressionar" o botão */
+button:active {
+    background-color: #300202;
+    transform: scale(0.98);
+}
+
+button[type="reset"]:hover {
+    background-color: #555;
+}
+
+/* ── Inputs e textarea ── */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #4a0404;
+    outline: 2px solid rgba(74, 4, 4, 0.25);
+    background-color: #fff8f4;
+}
+
+/* ✅ :focus-within — quando um campo dentro dos filtros está ativo */
+fieldset:focus-within,
+.filtros-categoria:focus-within {
+    border-color: #4a0404;
+    box-shadow: 0 0 0 3px rgba(74, 4, 4, 0.08);
+}
+
+/* ── Links externos ── */
+a[target="_blank"]:hover {
+    opacity: 0.8;
+}
+
+/* ── Imagens de harmonização ── */
+article img:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s;
+}

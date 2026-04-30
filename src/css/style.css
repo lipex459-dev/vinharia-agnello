@@ -1,16 +1,30 @@
+/* ============================================
+   VINHERIA AGNELLO — style.css
+   Pseudo-classes usadas neste arquivo:
+     :nth-child()  → tabelas (zebra) e listas
+     :not()        → nav links, artigos, inputs
+     :checked      → checkboxes de filtro e radio
+     :first-child  → primeiro item da lista
+     :last-child   → último item da lista / td
+   ============================================ */
+
+/* ── Reset e base ── */
 body {
     margin: 0;
     padding: 20px;
-    font-family: sans-serif;
+    font-family: Georgia, 'Times New Roman', serif;
     background-color: #fcfcfc;
+    color: #222;
 }
 
+/* ── Cabeçalho ── */
 h1 {
     color: white;
     background-color: #4a0404;
     padding: 20px;
     text-align: center;
     border-radius: 5px;
+    letter-spacing: 1px;
 }
 
 h2 {
@@ -19,6 +33,7 @@ h2 {
     padding-bottom: 5px;
 }
 
+/* ── Navegação ── */
 nav {
     text-align: center;
     margin-bottom: 30px;
@@ -31,22 +46,44 @@ nav a {
     text-decoration: none;
     color: #4a0404;
     font-weight: bold;
+    transition: color 0.2s, border-bottom 0.2s;
 }
 
+/* ✅ :not() — todos os links do nav, exceto o último, recebem separador à direita */
+nav a:not(:last-child) {
+    border-right: 1px solid #c0a08a;
+    padding-right: 20px;
+}
+
+/* ── Produtos / Cards ── */
 .container-flex {
     text-align: left;
 }
 
-.item-produto, article {
+.item-produto,
+article {
     display: inline-block;
     vertical-align: top;
     width: 230px;
-    margin: 10px 10px;
+    margin: 10px;
     padding: 15px;
     border: 1px solid #ddd;
     background-color: white;
     text-align: center;
-    min-height: 380px
+    min-height: 380px;
+    transition: box-shadow 0.25s;
+}
+
+/* ✅ :not() — artigos que NÃO têm a classe .destaque ficam com borda comum */
+article:not(.destaque) {
+    border: 1px solid #ddd;
+}
+
+/* ✅ :nth-child() — destaca o 2.º e 4.º card de produto com fundo suave */
+.container-flex .item-produto:nth-child(2),
+.container-flex .item-produto:nth-child(4) {
+    background-color: #fdf6f0;
+    border-color: #c0a08a;
 }
 
 article img {
@@ -55,13 +92,16 @@ article img {
     height: auto;
 }
 
+/* ── Tabela ── */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #4a0404;
 }
 
@@ -69,6 +109,8 @@ th {
     background-color: #4a0404;
     color: white;
     padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 td {
@@ -76,27 +118,140 @@ td {
     text-align: center;
 }
 
+/* ✅ :nth-child() — zebra nas linhas do tbody */
+tbody tr:nth-child(odd) {
+    background-color: #fff8f4;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5ebe4;
+}
+
+/* ✅ :last-child — última coluna de cada linha em itálico */
+td:last-child {
+    font-style: italic;
+    color: #5a1010;
+}
+
+/* ── Listas ── */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
 ul li {
-    padding: 8px;
+    padding: 8px 12px;
     border-left: 5px solid #4a0404;
     margin-bottom: 5px;
     background-color: #f9f9f9;
+    transition: background-color 0.2s;
 }
 
-footer {
-    text-align: center;
-    margin-top: 40px;
-    color: #666;
-    font-size: 0.8em;
+/* ✅ :first-child — primeiro item da lista com destaque especial */
+ul li:first-child {
+    background-color: #4a0404;
+    color: white;
+    border-left-color: #c0a08a;
+    font-weight: bold;
 }
 
-/* === FIM DA PÁGINA DE PRODUTOS === */
-/* Inicio index */
+/* ✅ :nth-child() — itens pares da lista com fundo diferente */
+ul li:nth-child(even) {
+    background-color: #f0e6df;
+}
+
+/* ✅ :not() — todos os li que NÃO são o primeiro não têm negrito */
+ul li:not(:first-child) {
+    font-weight: normal;
+}
+
+/* ── Formulário ── */
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+/* ✅ :not() — inputs que NÃO são checkbox/radio têm borda colorida ao focar */
+input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):focus,
+textarea:focus,
+select:focus {
+    border-color: #4a0404;
+    outline: none;
+    background-color: #fff8f4;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 18px;
+    background-color: #4a0404;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s;
+}
+
+/* ✅ :not() — botão reset tem visual diferente do submit */
+button[type="reset"]:not([type="submit"]) {
+    background-color: #888;
+    margin-left: 8px;
+}
+
+/* ── Filtros com :checked ── */
+.filtros-categoria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 14px;
+    background: #f9f4f0;
+    border: 1px solid #c0a08a;
+    border-radius: 6px;
+}
+
+.filtros-categoria label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 0.95em;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid #c0a08a;
+    background-color: white;
+    transition: background-color 0.2s, color 0.2s;
+    user-select: none;
+}
+
+.filtros-categoria input[type="checkbox"],
+.filtros-categoria input[type="radio"] {
+    width: auto;
+    accent-color: #4a0404;
+}
+
+/* ✅ :checked — checkbox/radio marcado ganha outline */
+.filtros-categoria input[type="checkbox"]:checked,
+.filtros-categoria input[type="radio"]:checked {
+    outline: 2px solid #4a0404;
+}
+
+/* ✅ :checked via :has() — label inteiro muda quando marcado */
+.filtros-categoria label:has(input:checked) {
+    background-color: #4a0404;
+    color: white;
+    border-color: #4a0404;
+}
+
+/* ── Seções ── */
 main {
     margin-top: 20px;
 }
@@ -112,24 +267,16 @@ section {
     margin-bottom: 30px;
 }
 
-/* formulário */
-input, textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-}
-
-button {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #4a0404;
-    color: white;
-    border: none;
-}
-
-/* imagem geral */
 img {
     margin-top: 10px;
 }
 
-/* ====== PÁGINA HARMONIZAÇÃO (MELHOR VISUAL) ====== */
+/* ── Footer ── */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #666;
+    font-size: 0.8em;
+    border-top: 1px solid #e0d0c8;
+    padding-top: 12px;
+}

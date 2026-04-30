@@ -7,6 +7,7 @@
     <meta name="keywords" content="vinhos, vinheria agnello, comprar vinho, vinhos tintos, harmonização">
     <title>Produtos-Vinheria Agnello</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/efeitos.css">
 </head>
 
 <body>
@@ -23,6 +24,31 @@
 
     <main>
         <h1>Nossa Seleção de Rótulos</h1>
+        <!-- ===== FILTROS — pseudo-classe :checked ===== -->
+<section class="filtros">
+    <h2>Filtrar por Categoria</h2>
+    <p>Selecione os tipos de vinho que deseja ver:</p>
+
+    <div class="filtros-categoria">
+        <label>
+            <input type="checkbox" name="filtro" value="tinto" checked>
+            <span>🍷 Vinhos Tintos</span>
+        </label>
+        <label>
+            <input type="checkbox" name="filtro" value="branco">
+            <span>🥂 Vinhos Brancos</span>
+        </label>
+        <label>
+            <input type="checkbox" name="filtro" value="rose">
+            <span>🌸 Rosés</span>
+        </label>
+        <label>
+            <input type="checkbox" name="filtro" value="espumante">
+            <span>✨ Espumantes</span>
+        </label>
+    </div>
+</section>
+<!-- ===== FIM DOS FILTROS ===== -->
 
         <section class="destaques">
             <h2>Destaques da Vinheria</h2>
