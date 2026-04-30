@@ -31,8 +31,8 @@ O site conta com as seguintes seções:
 * 🍇 Catálogo
 * 📩 Contato
 ---
-✨ Efeitos Visuais
-Como parte do Check-Point 02, o projeto foi incrementado com efeitos visuais utilizando recursos avançados de CSS:
+## ✨ Efeitos Visuais
+
 🎯 Pseudo-classes
 
 :hover aplicado nos botões para feedback visual ao passar o mouse
