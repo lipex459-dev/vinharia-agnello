@@ -32,15 +32,15 @@ O site conta com as seguintes seções:
 * 📩 Contato
 ---
 ✨ Efeitos Visuais
-
 Como parte do Check-Point 02, o projeto foi incrementado com efeitos visuais utilizando recursos avançados de CSS:
-
 🎯 Pseudo-classes
 
 :hover aplicado nos botões para feedback visual ao passar o mouse
+
 🎨 Pseudo-elementos
 
 ::before e/ou ::after utilizados para adicionar decorações visuais aos elementos da página
+
 💫 Animações
 
 Animação criada com @keyframes para dar dinamismo a elementos da interface
@@ -52,6 +52,7 @@ Transições suaves aplicadas na navegação entre páginas, proporcionando uma 
 🎢 Transformações
 
 scale() e/ou rotate() aplicados nos ícones do site
+
 
 Todos os efeitos estão organizados no arquivo efeitos.css, importado ao final do style.css.
 
