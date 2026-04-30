@@ -15,6 +15,18 @@
 
 <body>
 
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', e => {
+        e.preventDefault();
+        const destino = link.href;
+        document.body.style.transition = 'opacity 0.4s ease';
+        document.body.style.opacity = '0';
+        setTimeout(() => { window.location.href = destino; }, 400);
+        });
+        });
+    </script>
+
 <header>
     <h1>Vinheria Agnello</h1>
 
