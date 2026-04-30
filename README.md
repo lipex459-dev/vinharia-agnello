@@ -30,6 +30,31 @@ O site conta com as seguintes seções:
 * 📜 História
 * 🍇 Catálogo
 * 📩 Contato
+---
+## ✨ Efeitos Visuais
+
+🎯 Pseudo-classes
+
+:hover aplicado nos botões para feedback visual ao passar o mouse
+
+🎨 Pseudo-elementos
+
+::before e/ou ::after utilizados para adicionar decorações visuais aos elementos da página
+
+💫 Animações
+
+Animação criada com @keyframes para dar dinamismo a elementos da interface
+
+🔄 Transições
+
+Transições suaves aplicadas na navegação entre páginas, proporcionando uma experiência mais fluida
+
+🎢 Transformações
+
+scale() e/ou rotate() aplicados nos ícones do site
+
+
+Todos os efeitos estão organizados no arquivo efeitos.css, importado ao final do style.css.
 
 ---
 
@@ -48,10 +73,21 @@ O site conta com as seguintes seções:
 
 ## 📂 Estrutura do Projeto
 
-/ vinheria-agnello
-│── index.html
-│── /pages
-│── /assets
+vinharia-agnello/
+│
+├── index.html
+├── README.md
+├── src/
+│   ├── assets/
+│   │   └── imgs/
+│   ├── css/
+│   │   ├── style.css
+│   │   └── efeitos.css
+│   ├── js/
+│   └── pages/
+│       ├── pagina1.html
+│       ├── pagina2.html
+│       └── ...
 
 ---
 
