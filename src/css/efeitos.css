@@ -84,3 +84,28 @@ article img:hover {
     transform: scale(1.03);
     transition: transform 0.3s;
 }
+
+.categorias ul li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.categorias ul li::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #4a0404;
+    margin-right: 15px;
+    vertical-align: middle;
+    transform: rotate(45deg);
+}
+
+.categorias ul li:hover::after {
+    content: " VER"; 
+    font-size: 0.6em;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #4a0404;
+    opacity: 0.7;
+}
