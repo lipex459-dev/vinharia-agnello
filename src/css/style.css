@@ -1,14 +1,3 @@
-/* ============================================
-   VINHERIA AGNELLO — style.css
-   Pseudo-classes usadas neste arquivo:
-     :nth-child()  → tabelas (zebra) e listas
-     :not()        → nav links, artigos, inputs
-     :checked      → checkboxes de filtro e radio
-     :first-child  → primeiro item da lista
-     :last-child   → último item da lista / td
-   ============================================ */
-
-/* ── Reset e base ── */
 body {
     margin: 0;
     padding: 20px;
@@ -17,7 +6,6 @@ body {
     color: #222;
 }
 
-/* ── Cabeçalho ── */
 h1 {
     color: white;
     background-color: #4a0404;
@@ -33,7 +21,6 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* ── Navegação ── */
 nav {
     text-align: center;
     margin-bottom: 30px;
@@ -49,13 +36,11 @@ nav a {
     transition: color 0.2s, border-bottom 0.2s;
 }
 
-/* ✅ :not() — todos os links do nav, exceto o último, recebem separador à direita */
 nav a:not(:last-child) {
     border-right: 1px solid #c0a08a;
     padding-right: 20px;
 }
 
-/* ── Produtos / Cards ── */
 .container-flex {
     text-align: left;
 }
@@ -74,12 +59,11 @@ article {
     transition: box-shadow 0.25s;
 }
 
-/* ✅ :not() — artigos que NÃO têm a classe .destaque ficam com borda comum */
 article:not(.destaque) {
     border: 1px solid #ddd;
 }
 
-/* ✅ :nth-child() — destaca o 2.º e 4.º card de produto com fundo suave */
+
 .container-flex .item-produto:nth-child(2),
 .container-flex .item-produto:nth-child(4) {
     background-color: #fdf6f0;
@@ -92,7 +76,6 @@ article img {
     height: auto;
 }
 
-/* ── Tabela ── */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -118,7 +101,6 @@ td {
     text-align: center;
 }
 
-/* ✅ :nth-child() — zebra nas linhas do tbody */
 tbody tr:nth-child(odd) {
     background-color: #fff8f4;
 }
@@ -127,13 +109,11 @@ tbody tr:nth-child(even) {
     background-color: #f5ebe4;
 }
 
-/* ✅ :last-child — última coluna de cada linha em itálico */
 td:last-child {
     font-style: italic;
     color: #5a1010;
 }
 
-/* ── Listas ── */
 ul {
     list-style-type: none;
     padding: 0;
@@ -147,7 +127,6 @@ ul li {
     transition: background-color 0.2s;
 }
 
-/* ✅ :first-child — primeiro item da lista com destaque especial */
 ul li:first-child {
     background-color: #4a0404;
     color: white;
@@ -155,17 +134,14 @@ ul li:first-child {
     font-weight: bold;
 }
 
-/* ✅ :nth-child() — itens pares da lista com fundo diferente */
 ul li:nth-child(even) {
     background-color: #f0e6df;
 }
 
-/* ✅ :not() — todos os li que NÃO são o primeiro não têm negrito */
 ul li:not(:first-child) {
     font-weight: normal;
 }
 
-/* ── Formulário ── */
 input,
 textarea,
 select {
@@ -179,7 +155,6 @@ select {
     transition: border-color 0.2s, background-color 0.2s;
 }
 
-/* ✅ :not() — inputs que NÃO são checkbox/radio têm borda colorida ao focar */
 input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):focus,
 textarea:focus,
 select:focus {
@@ -200,13 +175,11 @@ button {
     transition: background-color 0.2s;
 }
 
-/* ✅ :not() — botão reset tem visual diferente do submit */
 button[type="reset"]:not([type="submit"]) {
     background-color: #888;
     margin-left: 8px;
 }
 
-/* ── Filtros com :checked ── */
 .filtros-categoria {
     display: flex;
     flex-wrap: wrap;
@@ -238,20 +211,17 @@ button[type="reset"]:not([type="submit"]) {
     accent-color: #4a0404;
 }
 
-/* ✅ :checked — checkbox/radio marcado ganha outline */
 .filtros-categoria input[type="checkbox"]:checked,
 .filtros-categoria input[type="radio"]:checked {
     outline: 2px solid #4a0404;
 }
 
-/* ✅ :checked via :has() — label inteiro muda quando marcado */
 .filtros-categoria label:has(input:checked) {
     background-color: #4a0404;
     color: white;
     border-color: #4a0404;
 }
 
-/* ── Seções ── */
 main {
     margin-top: 20px;
 }
@@ -271,7 +241,6 @@ img {
     margin-top: 10px;
 }
 
-/* ── Footer ── */
 footer {
     text-align: center;
     margin-top: 40px;
