@@ -33,6 +33,11 @@ h2 {
     padding-bottom: 5px;
 }
 
+::selection {
+    background-color: #4a0404;
+    color: white;
+}
+
 /* ── Navegação ── */
 nav {
     text-align: center;
